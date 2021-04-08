@@ -1,0 +1,15 @@
+//vars
+private Servo servoConveyor;
+private DcMotor motorFiring;
+
+//Main
+@Override
+public void runOpMode() {
+  //hardwareMap.get(s)
+  servoConveyor = hardwareMap.get(Servo.class, "servoConveyor");
+  motorFiring = hardwareMap.get(DcMotor.class, "motorFiring");
+  
+  //Telemetry Status
+  telemetry.addData("Status","Initialized");
+  telemetry.update;
+}
