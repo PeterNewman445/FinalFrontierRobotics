@@ -12,4 +12,14 @@ public void runOpMode() {
   //Telemetry Status
   telemetry.addData("Status","Initialized");
   telemetry.update;
+  waitForStart();
+  //On Start area
+  
+  
+  //while running area (update void)
+  while(opModeIsActive()){
+    telemetry.addData("Status","Running");
+    telemetry.update;
+    
+  }
 }
