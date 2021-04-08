@@ -4,6 +4,7 @@ public class thisTeleOpClass extends LinearOpMode {
 private Servo servoConveyor;
 private DcMotor motorFiring;
 private bool boolFiring = false;
+private bool boolConveyor = false;
 
 //Main
 @Override
@@ -24,14 +25,22 @@ public void runOpMode() {
     telemetry.addData("Status","Running");
     telemetry.update;
     
-    //Firing, press to start spin, press again to stop.
+    //Firing, press to start spin, press again to stop. Spin to winnnnn
     if(gamepad1.x && !boolFiring) {
       motorFiring.setPower(1.0?); //Whatever power we want it to be set at to fire.
       boolFiring = true;
     }
-    else if(gamepad1.x && boolFiring){
+    else if(gamepad1.x && boolFiring) {
       motorFiring.setPower(0.0?); //I don't know if it's a double or not
       boolFiring = false;
+    }
+    
+    //Conveyor, press to start spin, press again to stop. Collect em rings like sonic.
+    if(gamepad1.y && !boolConveyor) {
+      
+    }
+    else if(gamepad.y && boolConveyor) {
+      
     }
   }
 }
